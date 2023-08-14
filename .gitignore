@@ -1,0 +1,4 @@
+nobuild
+generate
+*.old
+output.txt

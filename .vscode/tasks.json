@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build nobuild",
+            "type": "shell",
+            "windows": {
+                "command": "zig cc --debug -std=c11 -o nobuild.exe -ITools nobuild.c -fno-sanitize=undefined -fno-omit-frame-pointer -target x86_64-windows",
+                "problemMatcher": [
+                    "$zig"
+                ],
+            },
+            "linux": {
+                "command": "clang -g -std=c11 -o nobuild nobuild.c -I./generated -fno-sanitize=undefined -fno-omit-frame-pointer",
+                "problemMatcher": [
+                    "$gcc"
+                ],
+            },
+            "group": "build"
+        }
+    ]
+}

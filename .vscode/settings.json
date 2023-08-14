@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "chrono": "c",
+        "functional": "c",
+        "unistd.h": "c",
+        "errno.h": "c",
+        "ctype.h": "c",
+        "nobuild_log.h": "c",
+        "variant": "c"
+    }
+}
